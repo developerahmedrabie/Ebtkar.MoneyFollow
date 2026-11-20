@@ -50,19 +50,18 @@ class TransactionSheet extends ConsumerStatefulWidget {
     String? presetMemberId,
     String? presetOccasionKey,
     TxType? presetType,
-  }) =>
-      showModalBottomSheet<void>(
-        context: context,
-        isScrollControlled: true,
-        useSafeArea: true,
-        builder: (_) => TransactionSheet(
-          mode: mode,
-          id: id,
-          presetMemberId: presetMemberId,
-          presetOccasionKey: presetOccasionKey,
-          presetType: presetType,
-        ),
-      );
+  }) => showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    useSafeArea: true,
+    builder: (_) => TransactionSheet(
+      mode: mode,
+      id: id,
+      presetMemberId: presetMemberId,
+      presetOccasionKey: presetOccasionKey,
+      presetType: presetType,
+    ),
+  );
 
   @override
   ConsumerState<TransactionSheet> createState() => _TransactionSheetState();
@@ -113,7 +112,10 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
         final c = Currency.fromCode(r.currency);
         setState(() {
           _type = TxType.parse(r.type);
-          _amount.text = minorToDecimalString(r.amountMinor, c).replaceFirst(RegExp(r'\.?0+$'), '');
+          _amount.text = minorToDecimalString(
+            r.amountMinor,
+            c,
+          ).replaceFirst(RegExp(r'\.?0+$'), '');
           _currency = c;
           _curTouched = true;
           _cat = r.categoryId;
@@ -130,7 +132,10 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
         final c = Currency.fromCode(t.currency);
         setState(() {
           _type = TxType.parse(t.type);
-          _amount.text = minorToDecimalString(t.amountMinor, c).replaceFirst(RegExp(r'\.?0+$'), '');
+          _amount.text = minorToDecimalString(
+            t.amountMinor,
+            c,
+          ).replaceFirst(RegExp(r'\.?0+$'), '');
           _currency = c;
           _curTouched = true;
           _cat = t.categoryId;
@@ -191,7 +196,9 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
           name: _note.text,
         );
         final repo = ref.read(recurringRepoProvider);
-        _editing ? await repo.update(widget.id!, input) : await repo.create(input);
+        _editing
+            ? await repo.update(widget.id!, input)
+            : await repo.create(input);
         msg = l.tRecSaved;
       } else {
         final input = TxInput(
@@ -213,19 +220,24 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
           String? recId;
           if (_repeat != 'never') {
             // FR-018: also schedule it, due one period after the date.
-            recId = await ref.read(recurringRepoProvider).create(RecurringInput(
-                  type: _type,
-                  amountMinor: m.minor,
-                  currency: cur.code,
-                  categoryId: _cat!,
-                  accountId: _account,
-                  frequency: _repeat,
-                  nextDue: advanceDue(_date, _repeat, LocalDate.dayOf(_date)),
-                  memberId: _member,
-                  name: _note.text,
-                ));
+            recId = await ref
+                .read(recurringRepoProvider)
+                .create(
+                  RecurringInput(
+                    type: _type,
+                    amountMinor: m.minor,
+                    currency: cur.code,
+                    categoryId: _cat!,
+                    accountId: _account,
+                    frequency: _repeat,
+                    nextDue: advanceDue(_date, _repeat, LocalDate.dayOf(_date)),
+                    memberId: _member,
+                    name: _note.text,
+                  ),
+                );
           }
-          await repo.create(TxInput(
+          await repo.create(
+            TxInput(
               type: input.type,
               amountMinor: input.amountMinor,
               currency: input.currency,
@@ -235,18 +247,31 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
               memberId: input.memberId,
               occasionId: input.occasionId,
               note: input.note,
-              recurringId: recId));
+              recurringId: recId,
+            ),
+          );
           msg = recId == null ? l.tAdded : l.tAddedRep;
         }
         ref.read(selectedMonthProvider.notifier).set(LocalDate.monthOf(_date));
       }
-      await ref.read(prefsProvider).setLastDataChangeAt(DateTime.now().millisecondsSinceEpoch);
+      await ref
+          .read(prefsProvider)
+          .setLastDataChangeAt(DateTime.now().millisecondsSinceEpoch);
     } on ValidationException catch (e) {
-      setState(() => e.code == 'err_cat' ? _catError = l.errCat : _amountError = l.errAmount);
+      setState(
+        () => e.code == 'err_cat'
+            ? _catError = l.errCat
+            : _amountError = l.errAmount,
+      );
       return;
     }
     nav.pop();
-    messenger.showSnackBar(SnackBar(content: Text(msg), duration: const Duration(milliseconds: 1800)));
+    messenger.showSnackBar(
+      SnackBar(
+        content: Text(msg),
+        duration: const Duration(milliseconds: 1800),
+      ),
+    );
   }
 
   Future<void> _delete() async {
@@ -259,7 +284,9 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
       await ref.read(transactionsRepoProvider).delete(widget.id!);
     }
     nav.pop();
-    messenger.showSnackBar(SnackBar(content: Text(_isRec ? l.tRecDeleted : l.tDeleted)));
+    messenger.showSnackBar(
+      SnackBar(content: Text(_isRec ? l.tRecDeleted : l.tDeleted)),
+    );
   }
 
   Future<void> _pickDate() async {
@@ -272,7 +299,9 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
     );
     if (picked != null) {
       setState(() {
-        _date = LocalDate.format(DateTime.utc(picked.year, picked.month, picked.day));
+        _date = LocalDate.format(
+          DateTime.utc(picked.year, picked.month, picked.day),
+        );
         _maybeSuggest(ref.read(occasionServiceProvider));
       });
     }
@@ -285,7 +314,10 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
     final dAsync = ref.watch(familyDataProvider);
     final d = dAsync.value;
     if (d == null || !_loaded) {
-      return const SizedBox(height: 300, child: Center(child: CircularProgressIndicator()));
+      return const SizedBox(
+        height: 300,
+        child: Center(child: CircularProgressIndicator()),
+      );
     }
     final occ = ref.watch(occasionServiceProvider);
     if (!_editing && !_occTouched && _type == TxType.expense && !_isRec) {
@@ -306,10 +338,23 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(children: [
-              Expanded(child: Text(title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
-              TextButton(onPressed: () => Navigator.pop(context), child: Text(l.cancel)),
-            ]),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text(l.cancel),
+                ),
+              ],
+            ),
             const SizedBox(height: 8),
             Segments<String>(
               value: _type.name,
@@ -326,49 +371,78 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
                 }
                 setState(() {
                   _type = TxType.parse(v);
-                  if (_cat != null && labels.categoryDef(_cat!).type != _type) _cat = null;
+                  if (_cat != null && labels.categoryDef(_cat!).type != _type)
+                    _cat = null;
                   if (_type == TxType.income) _occasion = null;
                 });
               },
             ),
             const SizedBox(height: 14),
             // Amount + currency
-            Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Expanded(
-                child: TextField(
-                  controller: _amount,
-                  autofocus: !_editing,
-                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
-                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'[0-9٠-٩.,٫]'))],
-                  style: TextStyle(
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: _amount,
+                    autofocus: !_editing,
+                    keyboardType: const TextInputType.numberWithOptions(
+                      decimal: true,
+                    ),
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'[0-9٠-٩.,٫]')),
+                    ],
+                    style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.w800,
-                      color: _type == TxType.income ? c.income : c.expense),
-                  decoration: InputDecoration(hintText: '0', errorText: _amountError),
-                  onChanged: (_) => setState(() => _amountError = null),
+                      color: _type == TxType.income ? c.income : c.expense,
+                    ),
+                    decoration: InputDecoration(
+                      hintText: '0',
+                      errorText: _amountError,
+                    ),
+                    onChanged: (_) => setState(() => _amountError = null),
+                  ),
                 ),
-              ),
-              const SizedBox(width: 8),
-              DropdownButton<Currency>(
-                value: cur,
-                underline: const SizedBox.shrink(),
-                items: [
-                  for (final x in Currency.values)
-                    DropdownMenuItem(value: x, child: Text(x.label(context.lang))),
-                ],
-                onChanged: (x) => setState(() {
-                  _currency = x;
-                  _curTouched = true;
-                }),
-              ),
-            ]),
+                const SizedBox(width: 8),
+                DropdownButton<Currency>(
+                  value: cur,
+                  underline: const SizedBox.shrink(),
+                  items: [
+                    for (final x in Currency.values)
+                      DropdownMenuItem(
+                        value: x,
+                        child: Text(x.label(context.lang)),
+                      ),
+                  ],
+                  onChanged: (x) => setState(() {
+                    _currency = x;
+                    _curTouched = true;
+                  }),
+                ),
+              ],
+            ),
             if (cur != d.main && parsed != null)
               Padding(
                 padding: const EdgeInsets.only(top: 4),
                 child: Text(
-                    formatApprox(d.currentMain(parsed.minor, cur.code), d.main, context.lang),
-                    style: TextStyle(color: c.muted)),
+                  formatApprox(
+                    d.currentMain(parsed.minor, cur.code),
+                    d.main,
+                    context.lang,
+                  ),
+                  style: TextStyle(color: c.muted),
+                ),
               ),
+            FieldLabel(_isRec ? l.name : l.note),
+            TextField(
+              controller: _note,
+              maxLength: 60,
+              decoration: InputDecoration(
+                hintText: _isRec ? l.namePh : l.notePh,
+                counterText: '',
+              ),
+            ),
             FieldLabel(l.category),
             Wrap(
               spacing: 8,
@@ -390,7 +464,10 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
             if (_catError != null)
               Padding(
                 padding: const EdgeInsets.only(top: 6),
-                child: Text(_catError!, style: TextStyle(color: c.expense, fontSize: 12)),
+                child: Text(
+                  _catError!,
+                  style: TextStyle(color: c.expense, fontSize: 12),
+                ),
               ),
             FieldLabel(l.forWhom),
             _MemberChips(
@@ -399,63 +476,117 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
               selected: _member,
               onChanged: (v) => setState(() => _member = v),
             ),
-            Row(children: [
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                  FieldLabel(_isRec ? l.nextDue : l.date),
-                  OutlinedButton.icon(
-                    onPressed: _pickDate,
-                    icon: const Icon(Icons.event, size: 18),
-                    label: Text(dateShort(_date, context.lang)),
-                  ),
-                ]),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-                  FieldLabel(l.account),
-                  DropdownButtonFormField<String>(
-                    initialValue: _account,
-                    isExpanded: true,
-                    items: [
-                      for (final a in d.accounts)
-                        DropdownMenuItem(
-                            value: a.id,
-                            child: Text('${labels.accountIcon(a.id)} ${labels.account(a.id)}',
-                                overflow: TextOverflow.ellipsis)),
+            Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      FieldLabel(_isRec ? l.nextDue : l.date),
+                      OutlinedButton.icon(
+                        onPressed: _pickDate,
+                        icon: const Icon(Icons.event, size: 18),
+                        label: Text(dateShort(_date, context.lang)),
+                      ),
                     ],
-                    onChanged: (v) => setState(() {
-                      _account = v ?? _account;
-                      if (!_curTouched) _currency = null;
-                    }),
                   ),
-                ]),
-              ),
-            ]),
-            if (!_editing || _isRec) ...[
-              FieldLabel(_isRec ? l.frequency : l.repeat),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      FieldLabel(l.account),
+                      DropdownButtonFormField<String>(
+                        initialValue: _account,
+                        isExpanded: true,
+                        items: [
+                          for (final a in d.accounts)
+                            DropdownMenuItem(
+                              value: a.id,
+                              child: Text(
+                                '${labels.accountIcon(a.id)} ${labels.account(a.id)}',
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                        ],
+                        onChanged: (v) => setState(() {
+                          _account = v ?? _account;
+                          if (!_curTouched) _currency = null;
+                        }),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            if (_isRec) ...[
+              FieldLabel(l.frequency),
               DropdownButtonFormField<String>(
                 initialValue: _repeat,
                 isExpanded: true,
                 items: [
-                  if (!_isRec) DropdownMenuItem(value: 'never', child: Text(l.fqNever)),
                   for (final f in frequencies)
-                    DropdownMenuItem(value: f, child: Text(labels.frequency(f))),
+                    DropdownMenuItem(
+                      value: f,
+                      child: Text(labels.frequency(f)),
+                    ),
                 ],
                 onChanged: (v) => setState(() => _repeat = v ?? _repeat),
+              ),
+            ] else if (!_editing) ...[
+              const SizedBox(height: 8),
+              // Repeat options stay collapsed until the user opens them.
+              ExpansionTile(
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: const EdgeInsets.only(bottom: 8),
+                leading: const Icon(Icons.repeat),
+                title: Text(l.repeat),
+                subtitle: Text(
+                  _repeat == 'never' ? l.fqNever : labels.frequency(_repeat),
+                  style: TextStyle(color: c.muted),
+                ),
+                initiallyExpanded: _repeat != 'never',
+                shape: const Border(),
+                collapsedShape: const Border(),
+                children: [
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final f in ['never', ...frequencies])
+                        ChoiceChip(
+                          label: Text(
+                            f == 'never' ? l.fqNever : labels.frequency(f),
+                          ),
+                          selected: _repeat == f,
+                          onSelected: (_) => setState(() => _repeat = f),
+                        ),
+                    ],
+                  ),
+                ],
               ),
             ],
             if (!_isRec && _type == TxType.expense && occ != null) ...[
               FieldLabel(l.occasion),
               DropdownButtonFormField<String?>(
-                initialValue: _occasion != null && occ.byKey.containsKey(_occasion) ? _occasion : null,
+                initialValue:
+                    _occasion != null && occ.byKey.containsKey(_occasion)
+                    ? _occasion
+                    : null,
                 isExpanded: true,
                 items: [
-                  DropdownMenuItem<String?>(value: null, child: Text(l.occNone)),
+                  DropdownMenuItem<String?>(
+                    value: null,
+                    child: Text(l.occNone),
+                  ),
                   for (final k in occ.enabledKeys)
                     DropdownMenuItem<String?>(
-                        value: k,
-                        child: Text('${occ.byKey[k]!.icon} ${labels.occasion(k, occ)}')),
+                      value: k,
+                      child: Text(
+                        '${occ.byKey[k]!.icon} ${labels.occasion(k, occ)}',
+                      ),
+                    ),
                 ],
                 onChanged: (v) => setState(() {
                   _occasion = v;
@@ -463,17 +594,14 @@ class _TransactionSheetState extends ConsumerState<TransactionSheet> {
                 }),
               ),
             ],
-            FieldLabel(_isRec ? l.name : l.note),
-            TextField(
-              controller: _note,
-              maxLength: 60,
-              decoration: InputDecoration(hintText: _isRec ? l.namePh : l.notePh, counterText: ''),
-            ),
             const SizedBox(height: 18),
             FilledButton(onPressed: () => _save(d), child: Text(l.save)),
             if (_editing) ...[
               const SizedBox(height: 10),
-              ConfirmTwiceButton(label: _isRec ? l.delRec : l.delete, onConfirmed: _delete),
+              ConfirmTwiceButton(
+                label: _isRec ? l.delRec : l.delete,
+                onConfirmed: _delete,
+              ),
             ],
           ],
         ),
@@ -510,18 +638,25 @@ class _CatChoice extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: selected ? c.primary : c.line, width: selected ? 2 : 1),
+            border: Border.all(
+              color: selected ? c.primary : c.line,
+              width: selected ? 2 : 1,
+            ),
             color: selected ? c.primarySoft : null,
           ),
-          child: Column(children: [
-            CatIcon(icon: icon, color: color, size: 32),
-            const SizedBox(height: 4),
-            Text(label,
+          child: Column(
+            children: [
+              CatIcon(icon: icon, color: color, size: 32),
+              const SizedBox(height: 4),
+              Text(
+                label,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 11)),
-          ]),
+                style: const TextStyle(fontSize: 11),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -549,17 +684,19 @@ class _MemberChips extends StatelessWidget {
     ];
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: Row(children: [
-        for (final (id, av, name) in items)
-          Padding(
-            padding: const EdgeInsetsDirectional.only(end: 8),
-            child: ChoiceChip(
-              label: Text('$av $name'),
-              selected: selected == id,
-              onSelected: (_) => onChanged(id),
+      child: Row(
+        children: [
+          for (final (id, av, name) in items)
+            Padding(
+              padding: const EdgeInsetsDirectional.only(end: 8),
+              child: ChoiceChip(
+                label: Text('$av $name'),
+                selected: selected == id,
+                onSelected: (_) => onChanged(id),
+              ),
             ),
-          ),
-      ]),
+        ],
+      ),
     );
   }
 }

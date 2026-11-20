@@ -1,4 +1,3 @@
-import 'package:money_follow/data/db/app_database.dart';
 import 'package:money_follow/data/repositories/base_repository.dart';
 import 'package:money_follow/data/repositories/members_repository.dart';
 import 'package:money_follow/data/repositories/recurring_repository.dart';

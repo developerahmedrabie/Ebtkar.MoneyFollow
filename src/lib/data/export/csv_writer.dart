@@ -74,9 +74,8 @@ List<int> buildCsv(FamilyData d, CsvLabels l) {
   });
   const header = 'date,type,category,amount,currency,amount_{M},account,'
       'to_account,member,occasion,note,recurring';
-  final text = [header.replaceFirst('{M}', main), ...rows.map((r) => r.$3)]
-          .join('\r\n') +
-      '\r\n';
+  final text = '${[header.replaceFirst('{M}', main), ...rows.map((r) => r.$3)]
+          .join('\r\n')}\r\n';
   return [0xEF, 0xBB, 0xBF, ...utf8.encode(text)];
 }
 

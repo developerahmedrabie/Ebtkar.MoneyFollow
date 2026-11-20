@@ -1,6 +1,6 @@
-import 'package:test/test.dart';
 import 'package:money_follow/core/money/currency.dart';
 import 'package:money_follow/core/money/money.dart';
+import 'package:test/test.dart';
 
 void main() {
   group('Money.fromDecimalString', () {

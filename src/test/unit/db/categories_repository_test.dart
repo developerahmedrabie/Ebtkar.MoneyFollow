@@ -1,4 +1,3 @@
-import 'package:drift/drift.dart' hide isNull;
 import 'package:money_follow/data/db/app_database.dart';
 import 'package:money_follow/data/repositories/base_repository.dart';
 import 'package:money_follow/data/repositories/transactions_repository.dart';

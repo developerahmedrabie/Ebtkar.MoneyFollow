@@ -1,5 +1,5 @@
-import 'package:test/test.dart';
 import 'package:money_follow/core/time/dates.dart';
+import 'package:test/test.dart';
 
 void main() {
   test('shiftMonth across years', () {

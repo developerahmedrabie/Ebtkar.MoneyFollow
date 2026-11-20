@@ -1,11 +1,10 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
 import 'core/time/dates.dart';
 import 'data/db/app_database.dart';
 import 'data/family_data.dart';
 import 'data/prefs/device_prefs.dart';
-import 'package:http/http.dart' as http;
-
 import 'data/remote/date_clients.dart';
 import 'data/remote/occasion_dates_service.dart';
 import 'data/repositories/base_repository.dart';
@@ -13,15 +12,15 @@ import 'data/repositories/budgets_repository.dart';
 import 'data/repositories/categories_repository.dart';
 import 'data/repositories/members_repository.dart';
 import 'data/repositories/occasions_repository.dart';
+import 'data/repositories/rates_repository.dart';
 import 'data/repositories/recurring_repository.dart';
+import 'data/repositories/settings_repository.dart';
 import 'data/repositories/transactions_repository.dart';
 import 'data/repositories/transfers_repository.dart';
 import 'domain/category_catalog.dart';
 import 'domain/forecast.dart';
 import 'domain/occasion_predictor.dart';
 import 'domain/occasions.dart';
-import 'data/repositories/rates_repository.dart';
-import 'data/repositories/settings_repository.dart';
 
 /// Overridden in `main.dart` (and in tests).
 final prefsProvider =

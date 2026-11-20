@@ -57,11 +57,11 @@ void main() {
   });
 
   test('validation', () async {
-    expect(() => rec.create(RecurringInput(
+    expect(() => rec.create(const RecurringInput(
         type: TxType.expense, amountMinor: 0, currency: 'EGP', categoryId: 'rent',
         accountId: 'acc-bank', frequency: 'monthly', nextDue: '2026-12-01')),
         throwsA(anything));
-    expect(() => rec.create(RecurringInput(
+    expect(() => rec.create(const RecurringInput(
         type: TxType.expense, amountMinor: 10, currency: 'EGP', categoryId: 'rent',
         accountId: 'acc-bank', frequency: 'daily', nextDue: '2026-12-01')),
         throwsA(anything));

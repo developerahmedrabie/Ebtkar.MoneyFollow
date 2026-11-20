@@ -25,21 +25,29 @@ class AppShell extends ConsumerWidget {
           selected: on,
           label: label,
           child: InkWell(
-            onTap: () => shell.goBranch(i, initialLocation: i == shell.currentIndex),
+            onTap: () =>
+                shell.goBranch(i, initialLocation: i == shell.currentIndex),
             child: SizedBox(
               height: 64,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(on ? iconOn : icon, color: on ? c.primary : c.muted, size: 24),
+                  Icon(
+                    on ? iconOn : icon,
+                    color: on ? c.primary : c.muted,
+                    size: 24,
+                  ),
                   const SizedBox(height: 3),
-                  Text(label,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          fontSize: 11,
-                          color: on ? c.primary : c.muted,
-                          fontWeight: on ? FontWeight.w600 : FontWeight.normal)),
+                  Text(
+                    label,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: on ? c.primary : c.muted,
+                      fontWeight: on ? FontWeight.w600 : FontWeight.normal,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -62,34 +70,46 @@ class AppShell extends ConsumerWidget {
         ),
         child: SafeArea(
           top: false,
-          child: Row(
-            children: [
-              item(0, Icons.home_outlined, Icons.home, l.navHome),
-              item(1, Icons.receipt_long_outlined, Icons.receipt_long, l.navTx),
-              Expanded(
-                child: Center(
-                  child: Semantics(
-                    button: true,
-                    label: l.newTx,
-                    child: Material(
-                      color: c.primary,
-                      borderRadius: BorderRadius.circular(18),
-                      child: InkWell(
+          child: SizedBox(
+            height: 64,
+            child: Row(
+              children: [
+                item(0, Icons.home_outlined, Icons.home, l.navHome),
+                item(
+                  1,
+                  Icons.receipt_long_outlined,
+                  Icons.receipt_long,
+                  l.navTx,
+                ),
+                Expanded(
+                  child: Center(
+                    child: Semantics(
+                      button: true,
+                      label: l.newTx,
+                      child: Material(
+                        color: c.primary,
                         borderRadius: BorderRadius.circular(18),
-                        onTap: () => TransactionSheet.show(context),
-                        child: SizedBox(
-                          width: 56,
-                          height: 48,
-                          child: Icon(Icons.add, color: c.onPrimary, size: 28),
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(18),
+                          onTap: () => TransactionSheet.show(context),
+                          child: SizedBox(
+                            width: 56,
+                            height: 48,
+                            child: Icon(
+                              Icons.add,
+                              color: c.onPrimary,
+                              size: 28,
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              item(2, Icons.event_note_outlined, Icons.event_note, l.planner),
-              item(3, Icons.pie_chart_outline, Icons.pie_chart, l.reports),
-            ],
+                item(2, Icons.event_note_outlined, Icons.event_note, l.planner),
+                item(3, Icons.pie_chart_outline, Icons.pie_chart, l.reports),
+              ],
+            ),
           ),
         ),
       ),

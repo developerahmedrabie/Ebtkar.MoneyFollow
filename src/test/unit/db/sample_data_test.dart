@@ -1,5 +1,3 @@
-import 'package:drift/drift.dart';
-import 'package:money_follow/data/db/app_database.dart';
 import 'package:money_follow/data/sample/sample_data.dart';
 import 'package:test/test.dart';
 

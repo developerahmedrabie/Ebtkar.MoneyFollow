@@ -14,7 +14,7 @@ void main() {
     await db.close();
   });
 
-  final ref = () => (protoRef['fc'] as List).cast<Map<String, dynamic>>();
+  List<Map<String, dynamic>> ref() => (protoRef['fc'] as List).cast<Map<String, dynamic>>();
 
   test('without occasions: day-to-day, fixed and income match the prototype',
       () {

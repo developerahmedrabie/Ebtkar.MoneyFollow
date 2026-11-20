@@ -1,5 +1,5 @@
-import 'package:test/test.dart';
 import 'package:money_follow/core/time/hlc.dart';
+import 'package:test/test.dart';
 
 void main() {
   test('timestamps are monotonic even when the wall clock moves backwards',
