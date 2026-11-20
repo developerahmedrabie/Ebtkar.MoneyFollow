@@ -725,14 +725,24 @@ These items came up while building the prototype and need to be in the Flutter a
 | ID | Requirement | Reason |
 |---|---|---|
 | PR-01 | **Local database + Google Drive sync:** see §5.12 (FR-DB, FR-SYNC). Confirmed requirement. | Parents see and enter the family's spending from their own phones with no server to run. |
-| PR-02 | **Child devices with limited rights:** a child's phone syncs only their own spending, pocket money and history, not the family totals. | Keeps the parent in control. Note: Drive sync cannot enforce this on its own, because anyone with access to the sync folder can read all of it (unless per-member encryption is added). |
-| PR-03 | **Store the exchange rate on each transaction** at the time it is recorded. | Changing today's rate must not change the value of past transactions. |
+| PR-02 | **Child devices with limited rights (version 2):** a child's phone syncs only their own spending, pocket money and history, not the family totals. **Decided 2026-11-15:** in version 1 children are tracked on the parents' phones only. | Keeps the parent in control. Drive sync cannot enforce this on its own, because anyone with access to the sync folder can read all of it, so version 2 needs per-member encryption or another design. |
+| PR-03 | **Store the exchange rate on each transaction** at the time it is recorded. **Decided 2026-11-15:** a rate change applies only to new transactions, forecasts, unpaid recurring items and current balances; past months never change. | Changing today's rate must not change the value of past transactions. |
 | PR-04 | **Live exchange rates** with manual override. | Rates change often. |
-| PR-05 | **Transfers between accounts** (e.g. withdraw cash from the bank, pay the card). | Without transfers, Cash and Card balances go negative. |
+| PR-05 | **Transfers between accounts** (e.g. withdraw cash from the bank, pay the card), including between currencies with the amount received. Transfers are not income or expenses. **Confirmed for version 1 (2026-11-15).** | Without transfers, Cash and Card balances go negative. |
 | PR-06 | **Adjust an occasion date by ±1 day** and **custom occasions** (FR-EV-13, FR-EV-14). | Moon sighting; family-specific events. |
 | PR-07 | **Notifications:** bill due, budget at 80 % / 100 %, occasion coming in 30 days with the amount to put aside. | Act before it happens. |
 | PR-08 | **Backup and restore** to a file (in addition to the Drive backup in FR-SYNC-11), and CSV import. | Users without sync; bringing existing data. |
 | PR-09 | **App lock** (PIN / biometrics). | Financial data. |
+| PR-10 | **Backup file + weekly reminder (release 1.0):** save one backup file anywhere and restore it on any phone; optional password; reminder after 7 days without a backup. | Release 1.0 has no sync, so this is the only protection against a lost phone. |
+| PR-11 | **First-launch setup:** language (with "Restore from backup"), main currency and country, family members, all skippable; then "Explore with sample data" (with a banner and one-tap clear) or "Start with my own data". | Helps new users learn the app; replaces the prototype's "Reset demo data". |
+| PR-12 | **Sync recovery key (release 1.1):** a one-time key shown when encryption is set up; the passphrase or the key unlocks the Drive copy. | A forgotten passphrase must not lose the family's data. |
+
+**Release plan (decided 2026-11-15):**
+- **Release 1.0:** everything except Google Drive sync, including transfers (PR-05), the backup file (PR-10) and setup (PR-11).
+- **Release 1.1:** adds Google Drive sync (§5.12, PR-01, PR-12).
+- **Version 2:** children's own phones (PR-02).
+
+Full detail is in [`specs/001-family-finance-app/spec.md`](../specs/001-family-finance-app/spec.md).
 
 ---
 
@@ -741,8 +751,8 @@ These items came up while building the prototype and need to be in the Flutter a
 | # | Decision | Options |
 |---|---|---|
 | D-1 | How to build Android APKs: Windows Smart App Control blocks a Flutter build tool (`impellerc.exe`) on the development PC. | (a) Turn off Smart App Control on the PC, or (b) build APKs with GitHub Actions. |
-| D-2 | Negative Cash / Card balances in the sample data. | (a) Add transfers between accounts (PR-05), or (b) adjust the sample data only. |
-| D-3 | Which Google accounts the family's devices use for Drive sync. | (a) **One family Google account** on every phone. The app uses its hidden app-data folder (`drive.appdata` scope). Simplest and invisible in Drive, but the app-data folder can't be shared with another account. (b) **Each parent uses their own Google account.** The owner's app creates a "MoneyFollow" folder (`drive.file` scope) and shares it with the other parent's Google account. That person must pick the folder once in Google's file picker so the app may open it. More set-up and more to test. *Recommendation: (b) if the parents use different Google accounts, otherwise (a).* |
+| D-2 | Negative Cash / Card balances in the sample data. | **Decided 2026-11-15: (a) add transfers between accounts (PR-05).** |
+| D-3 | Which Google accounts the family's devices use for Drive sync. | (a) **One family Google account** on every phone. The app uses its hidden app-data folder (`drive.appdata` scope). Simplest and invisible in Drive, but the app-data folder can't be shared with another account. (b) **Each parent uses their own Google account.** The owner's app creates a "MoneyFollow" folder (`drive.file` scope) and shares it with the other parent's Google account. That person must pick the folder once in Google's file picker so the app may open it. More set-up and more to test. **Decided 2026-11-15: support both, with (a) as the default.** The user chooses when connecting. |
 | D-4 | Exchange-rate provider (PR-04). | To be selected. |
 
 ---

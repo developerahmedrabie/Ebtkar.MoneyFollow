@@ -1,0 +1,1898 @@
+{
+  "@@locale": "en",
+  "about": "About",
+  "@about": {
+    "description": "prototype key: about"
+  },
+  "accBank": "Bank",
+  "@accBank": {
+    "description": "prototype key: acc_bank"
+  },
+  "accCard": "Card",
+  "@accCard": {
+    "description": "prototype key: acc_card"
+  },
+  "accCash": "Cash",
+  "@accCash": {
+    "description": "prototype key: acc_cash"
+  },
+  "accUsd": "Dollar account",
+  "@accUsd": {
+    "description": "prototype key: acc_usd"
+  },
+  "account": "Account",
+  "@account": {
+    "description": "prototype key: account"
+  },
+  "accounts": "Accounts",
+  "@accounts": {
+    "description": "prototype key: accounts"
+  },
+  "addCat": "+ Add category",
+  "@addCat": {
+    "description": "prototype key: add_cat"
+  },
+  "addMember": "+ Add member",
+  "@addMember": {
+    "description": "prototype key: add_member"
+  },
+  "addOccasion": "+ Add occasion",
+  "@addOccasion": {
+    "description": "prototype key: add_occasion"
+  },
+  "addRec": "+ Add",
+  "@addRec": {
+    "description": "prototype key: add_rec"
+  },
+  "adjustDate": "Adjust date",
+  "@adjustDate": {
+    "description": "prototype key: adjust_date"
+  },
+  "adjustHint": "Moon sighting can shift the date by a day.",
+  "@adjustHint": {
+    "description": "prototype key: adjust_hint"
+  },
+  "all": "All",
+  "@all": {
+    "description": "prototype key: all"
+  },
+  "allMembers": "Everyone",
+  "@allMembers": {
+    "description": "prototype key: all_members"
+  },
+  "allRec": "All recurring",
+  "@allRec": {
+    "description": "prototype key: all_rec"
+  },
+  "amount": "Amount",
+  "@amount": {
+    "description": "prototype key: amount"
+  },
+  "amountReceived": "Amount received",
+  "@amountReceived": {
+    "description": "prototype key: amount_received"
+  },
+  "amountSent": "Amount sent",
+  "@amountSent": {
+    "description": "prototype key: amount_sent"
+  },
+  "appLock": "App lock",
+  "@appLock": {
+    "description": "prototype key: app_lock"
+  },
+  "appName": "MoneyFollow",
+  "@appName": {
+    "description": "prototype key: app_name"
+  },
+  "appSub": "Home finance",
+  "@appSub": {
+    "description": "prototype key: app_sub"
+  },
+  "approx": "≈ {v}",
+  "@approx": {
+    "description": "prototype key: approx",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "avatar": "Avatar",
+  "@avatar": {
+    "description": "prototype key: avatar"
+  },
+  "avgDaily": "Avg. daily spend",
+  "@avgDaily": {
+    "description": "prototype key: avg_daily"
+  },
+  "back": "Back",
+  "@back": {
+    "description": "prototype key: back"
+  },
+  "backup": "Backup",
+  "@backup": {
+    "description": "prototype key: backup"
+  },
+  "backupCreated": "Backup created",
+  "@backupCreated": {
+    "description": "prototype key: backup_created"
+  },
+  "backupNow": "Back up now",
+  "@backupNow": {
+    "description": "prototype key: backup_now"
+  },
+  "backupPassword": "Password (optional)",
+  "@backupPassword": {
+    "description": "prototype key: backup_password"
+  },
+  "backupPasswordConfirm": "Confirm password",
+  "@backupPasswordConfirm": {
+    "description": "prototype key: backup_password_confirm"
+  },
+  "backupPasswordHint": "With a password the file is encrypted. You will need it to restore.",
+  "@backupPasswordHint": {
+    "description": "prototype key: backup_password_hint"
+  },
+  "backupReminder": "Backup reminder",
+  "@backupReminder": {
+    "description": "prototype key: backup_reminder"
+  },
+  "biometricReason": "Unlock MoneyFollow",
+  "@biometricReason": {
+    "description": "prototype key: biometric_reason"
+  },
+  "budgets": "Budgets",
+  "@budgets": {
+    "description": "prototype key: budgets"
+  },
+  "budgetsUpdated": "Budgets updated",
+  "@budgetsUpdated": {
+    "description": "prototype key: budgets_updated"
+  },
+  "builtin": "Built-in",
+  "@builtin": {
+    "description": "prototype key: builtin"
+  },
+  "builtinCats": "Built-in categories",
+  "@builtinCats": {
+    "description": "prototype key: builtin_cats"
+  },
+  "byCat": "Spending by category",
+  "@byCat": {
+    "description": "prototype key: by_cat"
+  },
+  "byMember": "Spending by member",
+  "@byMember": {
+    "description": "prototype key: by_member"
+  },
+  "cAE": "UAE",
+  "@cAE": {
+    "description": "prototype key: c_AE"
+  },
+  "cEG": "Egypt",
+  "@cEG": {
+    "description": "prototype key: c_EG"
+  },
+  "cGB": "United Kingdom",
+  "@cGB": {
+    "description": "prototype key: c_GB"
+  },
+  "cKW": "Kuwait",
+  "@cKW": {
+    "description": "prototype key: c_KW"
+  },
+  "cSA": "Saudi Arabia",
+  "@cSA": {
+    "description": "prototype key: c_SA"
+  },
+  "cUS": "United States",
+  "@cUS": {
+    "description": "prototype key: c_US"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "prototype key: cancel"
+  },
+  "catPh": "e.g. Pets",
+  "@catPh": {
+    "description": "prototype key: cat_ph"
+  },
+  "catType": "Type",
+  "@catType": {
+    "description": "prototype key: cat_type"
+  },
+  "categories": "Categories",
+  "@categories": {
+    "description": "prototype key: categories"
+  },
+  "category": "Category",
+  "@category": {
+    "description": "prototype key: category"
+  },
+  "catsHint": "Built-in categories come with the app and can’t be changed or deleted. Categories you add can be edited or deleted at any time.",
+  "@catsHint": {
+    "description": "prototype key: cats_hint"
+  },
+  "changePin": "Change PIN",
+  "@changePin": {
+    "description": "prototype key: change_pin"
+  },
+  "clear": "Clear",
+  "@clear": {
+    "description": "prototype key: clear"
+  },
+  "clearSample": "Clear sample data and start",
+  "@clearSample": {
+    "description": "prototype key: clear_sample"
+  },
+  "clearSampleBody": "All sample data and anything you added while exploring will be removed. Your setup choices are kept.",
+  "@clearSampleBody": {
+    "description": "prototype key: clear_sample_body"
+  },
+  "clearSampleTitle": "Clear sample data?",
+  "@clearSampleTitle": {
+    "description": "prototype key: clear_sample_title"
+  },
+  "colorL": "Color",
+  "@colorL": {
+    "description": "prototype key: color_l"
+  },
+  "comingUp": "Coming up",
+  "@comingUp": {
+    "description": "prototype key: coming_up"
+  },
+  "confirmPin": "Enter the PIN again",
+  "@confirmPin": {
+    "description": "prototype key: confirm_pin"
+  },
+  "currency": "Currency",
+  "@currency": {
+    "description": "prototype key: currency"
+  },
+  "dark": "Dark",
+  "@dark": {
+    "description": "prototype key: dark"
+  },
+  "data": "Data",
+  "@data": {
+    "description": "prototype key: data"
+  },
+  "date": "Date",
+  "@date": {
+    "description": "prototype key: date"
+  },
+  "dayEarlier": "1 day earlier",
+  "@dayEarlier": {
+    "description": "prototype key: day_earlier"
+  },
+  "dayLater": "1 day later",
+  "@dayLater": {
+    "description": "prototype key: day_later"
+  },
+  "daysLeft": "in {n} days",
+  "@daysLeft": {
+    "description": "prototype key: days_left",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "delCat": "Delete category",
+  "@delCat": {
+    "description": "prototype key: del_cat"
+  },
+  "delCatHint": "Deleting keeps its transactions, recurring items and history and moves them to “Other”.",
+  "@delCatHint": {
+    "description": "prototype key: del_cat_hint"
+  },
+  "delMemHint": "Removing a member keeps their transactions and moves them to Whole family.",
+  "@delMemHint": {
+    "description": "prototype key: del_mem_hint"
+  },
+  "delMember": "Remove member",
+  "@delMember": {
+    "description": "prototype key: del_member"
+  },
+  "delOccHint": "Tagged transactions keep their history.",
+  "@delOccHint": {
+    "description": "prototype key: del_occ_hint"
+  },
+  "delOccasion": "Delete occasion",
+  "@delOccasion": {
+    "description": "prototype key: del_occasion"
+  },
+  "delRec": "Stop repeating",
+  "@delRec": {
+    "description": "prototype key: del_rec"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "prototype key: delete"
+  },
+  "done": "Done",
+  "@done": {
+    "description": "prototype key: done"
+  },
+  "dontRemind": "Don''t remind me",
+  "@dontRemind": {
+    "description": "prototype key: dont_remind"
+  },
+  "due30": "Due in the next 30 days",
+  "@due30": {
+    "description": "prototype key: due_30"
+  },
+  "dueIn30": "Due in 30 days",
+  "@dueIn30": {
+    "description": "prototype key: due_in_30"
+  },
+  "dueToday": "Due today",
+  "@dueToday": {
+    "description": "prototype key: due_today"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "prototype key: edit"
+  },
+  "editCat": "Edit category",
+  "@editCat": {
+    "description": "prototype key: edit_cat"
+  },
+  "editMember": "Edit member",
+  "@editMember": {
+    "description": "prototype key: edit_member"
+  },
+  "editOccasion": "Edit occasion",
+  "@editOccasion": {
+    "description": "prototype key: edit_occasion"
+  },
+  "editRec": "Edit recurring item",
+  "@editRec": {
+    "description": "prototype key: edit_rec"
+  },
+  "editTransfer": "Edit transfer",
+  "@editTransfer": {
+    "description": "prototype key: edit_transfer"
+  },
+  "editTx": "Edit transaction",
+  "@editTx": {
+    "description": "prototype key: edit_tx"
+  },
+  "enterPassword": "Enter the backup password",
+  "@enterPassword": {
+    "description": "prototype key: enter_password"
+  },
+  "enterPin": "Enter your PIN",
+  "@enterPin": {
+    "description": "prototype key: enter_pin"
+  },
+  "errAmount": "Enter an amount greater than 0",
+  "@errAmount": {
+    "description": "prototype key: err_amount"
+  },
+  "errBackupDamaged": "This file is damaged or is not a MoneyFollow backup.",
+  "@errBackupDamaged": {
+    "description": "prototype key: err_backup_damaged"
+  },
+  "errBackupNewer": "This backup was made by a newer version of MoneyFollow. Update the app first.",
+  "@errBackupNewer": {
+    "description": "prototype key: err_backup_newer"
+  },
+  "errBackupPassword": "Wrong password",
+  "@errBackupPassword": {
+    "description": "prototype key: err_backup_password"
+  },
+  "errCat": "Choose a category",
+  "@errCat": {
+    "description": "prototype key: err_cat"
+  },
+  "errCatDup": "A category with this name already exists",
+  "@errCatDup": {
+    "description": "prototype key: err_cat_dup"
+  },
+  "errName": "Enter a name",
+  "@errName": {
+    "description": "prototype key: err_name"
+  },
+  "errPasswordMatch": "The passwords don''t match",
+  "@errPasswordMatch": {
+    "description": "prototype key: err_password_match"
+  },
+  "errPin": "Wrong PIN",
+  "@errPin": {
+    "description": "prototype key: err_pin"
+  },
+  "errPinMatch": "The PINs don''t match",
+  "@errPinMatch": {
+    "description": "prototype key: err_pin_match"
+  },
+  "errRate": "Enter a rate greater than 0",
+  "@errRate": {
+    "description": "prototype key: err_rate"
+  },
+  "errSameAccount": "Choose two different accounts",
+  "@errSameAccount": {
+    "description": "prototype key: err_same_account"
+  },
+  "errorGeneric": "Something went wrong",
+  "@errorGeneric": {
+    "description": "prototype key: error_generic"
+  },
+  "evBuiltin": "Built-in dates",
+  "@evBuiltin": {
+    "description": "prototype key: ev_builtin"
+  },
+  "evByCat": "Expected by category",
+  "@evByCat": {
+    "description": "prototype key: ev_by_cat"
+  },
+  "evCountry": "Country",
+  "@evCountry": {
+    "description": "prototype key: ev_country"
+  },
+  "evEidAdha": "Eid al-Adha",
+  "@evEidAdha": {
+    "description": "prototype key: ev_eid_adha"
+  },
+  "evEidFitr": "Eid al-Fitr",
+  "@evEidFitr": {
+    "description": "prototype key: ev_eid_fitr"
+  },
+  "evExpected": "Expected spending",
+  "@evExpected": {
+    "description": "prototype key: ev_expected"
+  },
+  "evHint": "Each occasion is predicted from what you spent on it in previous years, adjusted by your average change from year to year.",
+  "@evHint": {
+    "description": "prototype key: ev_hint"
+  },
+  "evHintD": "Expected = last time ({l}) × your average change between years ({g}).",
+  "@evHintD": {
+    "description": "prototype key: ev_hint_d",
+    "placeholders": {
+      "l": {
+        "type": "String"
+      },
+      "g": {
+        "type": "String"
+      }
+    }
+  },
+  "evHintOne": "Only one year recorded, so the expected amount equals last time.",
+  "@evHintOne": {
+    "description": "prototype key: ev_hint_one"
+  },
+  "evLast": "Last time {v}",
+  "@evLast": {
+    "description": "prototype key: ev_last",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "evLastTx": "Last time · {y}",
+  "@evLastTx": {
+    "description": "prototype key: ev_last_tx",
+    "placeholders": {
+      "y": {
+        "type": "String"
+      }
+    }
+  },
+  "evMothers": "Mother’s Day",
+  "@evMothers": {
+    "description": "prototype key: ev_mothers"
+  },
+  "evNewYear": "New Year’s Eve",
+  "@evNewYear": {
+    "description": "prototype key: ev_new_year"
+  },
+  "evNext": "Next occasion",
+  "@evNext": {
+    "description": "prototype key: ev_next"
+  },
+  "evNoHoliday": "Nager.Date has no public holidays for this country. Islamic dates still update.",
+  "@evNoHoliday": {
+    "description": "prototype key: ev_no_holiday"
+  },
+  "evNone": "No history yet. Tag expenses with this occasion and the app learns what it costs you.",
+  "@evNone": {
+    "description": "prototype key: ev_none"
+  },
+  "evNow": "Happening now",
+  "@evNow": {
+    "description": "prototype key: ev_now"
+  },
+  "evPred": "Expected",
+  "@evPred": {
+    "description": "prototype key: ev_pred"
+  },
+  "evPrev": "Previous years vs expected",
+  "@evPrev": {
+    "description": "prototype key: ev_prev"
+  },
+  "evRamadan": "Ramadan",
+  "@evRamadan": {
+    "description": "prototype key: ev_ramadan"
+  },
+  "evSave": "Put aside {v} a month to be ready",
+  "@evSave": {
+    "description": "prototype key: ev_save",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "evSchool": "Back to school",
+  "@evSchool": {
+    "description": "prototype key: ev_school"
+  },
+  "evSham": "Sham El-Nessim",
+  "@evSham": {
+    "description": "prototype key: ev_sham"
+  },
+  "evSources": "Islamic dates: Aladhan Hijri calendar API. Public holidays: Nager.Date API.",
+  "@evSources": {
+    "description": "prototype key: ev_sources"
+  },
+  "evSrcCustom": "Your occasion",
+  "@evSrcCustom": {
+    "description": "prototype key: ev_src_custom"
+  },
+  "evSrcFixed": "Fixed date",
+  "@evSrcFixed": {
+    "description": "prototype key: ev_src_fixed"
+  },
+  "evSrcHijri": "Hijri calendar",
+  "@evSrcHijri": {
+    "description": "prototype key: ev_src_hijri"
+  },
+  "evSrcHoliday": "Public holiday",
+  "@evSrcHoliday": {
+    "description": "prototype key: ev_src_holiday"
+  },
+  "evSrcTitle": "Dates",
+  "@evSrcTitle": {
+    "description": "prototype key: ev_src_title"
+  },
+  "evSync": "Update",
+  "@evSync": {
+    "description": "prototype key: ev_sync"
+  },
+  "evSyncFail": "Could not reach the date services. Saved dates are still used.",
+  "@evSyncFail": {
+    "description": "prototype key: ev_sync_fail"
+  },
+  "evSynced": "Occasion dates updated ({n} dates)",
+  "@evSynced": {
+    "description": "prototype key: ev_synced",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "evSyncing": "Updating…",
+  "@evSyncing": {
+    "description": "prototype key: ev_syncing"
+  },
+  "evTotal12": "Occasions · next 12 months",
+  "@evTotal12": {
+    "description": "prototype key: ev_total12"
+  },
+  "evTracked": "Tracked occasions",
+  "@evTracked": {
+    "description": "prototype key: ev_tracked"
+  },
+  "evUpcoming": "Next 12 months",
+  "@evUpcoming": {
+    "description": "prototype key: ev_upcoming"
+  },
+  "evUpdated": "Updated {d}",
+  "@evUpdated": {
+    "description": "prototype key: ev_updated",
+    "placeholders": {
+      "d": {
+        "type": "String"
+      }
+    }
+  },
+  "evWho": "Who spent last time",
+  "@evWho": {
+    "description": "prototype key: ev_who"
+  },
+  "evXmas": "Christmas",
+  "@evXmas": {
+    "description": "prototype key: ev_xmas"
+  },
+  "expIncome": "Expected income",
+  "@expIncome": {
+    "description": "prototype key: exp_income"
+  },
+  "expSavings": "Expected savings",
+  "@expSavings": {
+    "description": "prototype key: exp_savings"
+  },
+  "expense": "Expense",
+  "@expense": {
+    "description": "prototype key: expense"
+  },
+  "expenses": "Expenses",
+  "@expenses": {
+    "description": "prototype key: expenses"
+  },
+  "explore": "Explore",
+  "@explore": {
+    "description": "prototype key: explore"
+  },
+  "exploreSample": "Explore with sample data",
+  "@exploreSample": {
+    "description": "prototype key: explore_sample"
+  },
+  "exploreSampleHint": "See the app filled with a sample family. Clear it whenever you are ready.",
+  "@exploreSampleHint": {
+    "description": "prototype key: explore_sample_hint"
+  },
+  "kExport": "Export CSV",
+  "@kExport": {
+    "description": "prototype key: export"
+  },
+  "exportDone": "CSV exported",
+  "@exportDone": {
+    "description": "prototype key: export_done"
+  },
+  "famFc": "Expected spending · next 3 months",
+  "@famFc": {
+    "description": "prototype key: fam_fc"
+  },
+  "famFcHint": "Each member’s forecast = their recurring items + the average of their other expenses over the last 3 months. Amounts in orange include a quarterly or yearly bill or an occasion.",
+  "@famFcHint": {
+    "description": "prototype key: fam_fc_hint"
+  },
+  "famMembers": "Family members",
+  "@famMembers": {
+    "description": "prototype key: fam_members"
+  },
+  "famShare": "Who spent this month",
+  "@famShare": {
+    "description": "prototype key: fam_share"
+  },
+  "family": "Family",
+  "@family": {
+    "description": "prototype key: family"
+  },
+  "fcAvg": "Average expected spending / month",
+  "@fcAvg": {
+    "description": "prototype key: fc_avg"
+  },
+  "fcHint": "How the forecast works: fixed bills come from your recurring items. Occasions use what you spent on them in previous years. Day-to-day spending is the average of your other expenses over the last 3 months ({v} / month). Expected income counts recurring income only.",
+  "@fcHint": {
+    "description": "prototype key: fc_hint",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "fcItems": "{f} fixed + {v} day-to-day",
+  "@fcItems": {
+    "description": "prototype key: fc_items",
+    "placeholders": {
+      "f": {
+        "type": "String"
+      },
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "fcOcc": "Occasions (estimated)",
+  "@fcOcc": {
+    "description": "prototype key: fc_occ"
+  },
+  "fcTitle": "Expected spending",
+  "@fcTitle": {
+    "description": "prototype key: fc_title"
+  },
+  "finish": "Finish",
+  "@finish": {
+    "description": "prototype key: finish"
+  },
+  "fixed": "Fixed bills",
+  "@fixed": {
+    "description": "prototype key: fixed"
+  },
+  "fixedMonth": "Fixed bills / month",
+  "@fixedMonth": {
+    "description": "prototype key: fixed_month"
+  },
+  "forWhom": "For",
+  "@forWhom": {
+    "description": "prototype key: for_whom"
+  },
+  "fqMonthly": "Monthly",
+  "@fqMonthly": {
+    "description": "prototype key: fq_monthly"
+  },
+  "fqNever": "Doesn''t repeat",
+  "@fqNever": {
+    "description": "prototype key: fq_never"
+  },
+  "fqQuarterly": "Every 3 months",
+  "@fqQuarterly": {
+    "description": "prototype key: fq_quarterly"
+  },
+  "fqWeekly": "Weekly",
+  "@fqWeekly": {
+    "description": "prototype key: fq_weekly"
+  },
+  "fqYearly": "Yearly",
+  "@fqYearly": {
+    "description": "prototype key: fq_yearly"
+  },
+  "frequency": "Repeats",
+  "@frequency": {
+    "description": "prototype key: frequency"
+  },
+  "fromAccount": "From",
+  "@fromAccount": {
+    "description": "prototype key: from_account"
+  },
+  "higher": "Higher than usual",
+  "@higher": {
+    "description": "prototype key: higher"
+  },
+  "iconL": "Icon",
+  "@iconL": {
+    "description": "prototype key: icon_l"
+  },
+  "inDays": "In {n} days",
+  "@inDays": {
+    "description": "prototype key: in_days",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "includes": "Includes {x}",
+  "@includes": {
+    "description": "prototype key: includes",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "income": "Income",
+  "@income": {
+    "description": "prototype key: income"
+  },
+  "income1": "Income",
+  "@income1": {
+    "description": "prototype key: income1"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "prototype key: language"
+  },
+  "lastBackup": "Last backup {d}",
+  "@lastBackup": {
+    "description": "prototype key: last_backup",
+    "placeholders": {
+      "d": {
+        "type": "String"
+      }
+    }
+  },
+  "last6": "Last 6 months",
+  "@last6": {
+    "description": "prototype key: last6"
+  },
+  "left": "{v} left",
+  "@left": {
+    "description": "prototype key: left",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "leftOf": "{v} left of {t}",
+  "@leftOf": {
+    "description": "prototype key: left_of",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      },
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "light": "Light",
+  "@light": {
+    "description": "prototype key: light"
+  },
+  "lockBiometric": "PIN + fingerprint / face",
+  "@lockBiometric": {
+    "description": "prototype key: lock_biometric"
+  },
+  "lockOff": "Off",
+  "@lockOff": {
+    "description": "prototype key: lock_off"
+  },
+  "lockPin": "PIN",
+  "@lockPin": {
+    "description": "prototype key: lock_pin"
+  },
+  "m3": "Next 3 months",
+  "@m3": {
+    "description": "prototype key: m3"
+  },
+  "m6": "Next 6 months",
+  "@m6": {
+    "description": "prototype key: m6"
+  },
+  "mainCurrency": "Main currency",
+  "@mainCurrency": {
+    "description": "prototype key: main_currency"
+  },
+  "manage": "Manage",
+  "@manage": {
+    "description": "prototype key: manage"
+  },
+  "markPaid": "Mark paid",
+  "@markPaid": {
+    "description": "prototype key: mark_paid"
+  },
+  "markRecv": "Received",
+  "@markRecv": {
+    "description": "prototype key: mark_recv"
+  },
+  "memDad": "Dad",
+  "@memDad": {
+    "description": "prototype key: mem_dad"
+  },
+  "memFamily": "Whole family",
+  "@memFamily": {
+    "description": "prototype key: mem_family"
+  },
+  "memMariam": "Mariam",
+  "@memMariam": {
+    "description": "prototype key: mem_mariam"
+  },
+  "memMom": "Mom",
+  "@memMom": {
+    "description": "prototype key: mem_mom"
+  },
+  "memOmar": "Omar",
+  "@memOmar": {
+    "description": "prototype key: mem_omar"
+  },
+  "memPh": "e.g. Omar",
+  "@memPh": {
+    "description": "prototype key: mem_ph"
+  },
+  "memTx": "Activity · {m}",
+  "@memTx": {
+    "description": "prototype key: mem_tx",
+    "placeholders": {
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "members": "Members",
+  "@members": {
+    "description": "prototype key: members"
+  },
+  "monthlyLimits": "Monthly limits",
+  "@monthlyLimits": {
+    "description": "prototype key: monthly_limits"
+  },
+  "myCats": "Your categories",
+  "@myCats": {
+    "description": "prototype key: my_cats"
+  },
+  "nBakery": "Bakery",
+  "@nBakery": {
+    "description": "prototype key: n_bakery"
+  },
+  "nBallet": "Ballet class",
+  "@nBallet": {
+    "description": "prototype key: n_ballet"
+  },
+  "nBooks": "School books & uniform",
+  "@nBooks": {
+    "description": "prototype key: n_books"
+  },
+  "nCats": "{b} built-in · {c} yours",
+  "@nCats": {
+    "description": "prototype key: n_cats",
+    "placeholders": {
+      "b": {
+        "type": "String"
+      },
+      "c": {
+        "type": "String"
+      }
+    }
+  },
+  "nClothes": "Clothes",
+  "@nClothes": {
+    "description": "prototype key: n_clothes"
+  },
+  "nCoffee": "Coffee",
+  "@nCoffee": {
+    "description": "prototype key: n_coffee"
+  },
+  "nCourse": "Online course",
+  "@nCourse": {
+    "description": "prototype key: n_course"
+  },
+  "nDinner": "Family dinner",
+  "@nDinner": {
+    "description": "prototype key: n_dinner"
+  },
+  "nEidClothes": "Eid clothes",
+  "@nEidClothes": {
+    "description": "prototype key: n_eid_clothes"
+  },
+  "nEidiya": "Eidiya for the kids",
+  "@nEidiya": {
+    "description": "prototype key: n_eidiya"
+  },
+  "nFanous": "Ramadan lantern",
+  "@nFanous": {
+    "description": "prototype key: n_fanous"
+  },
+  "nFesikh": "Sham El-Nessim food",
+  "@nFesikh": {
+    "description": "prototype key: n_fesikh"
+  },
+  "nFilter": "Water filter service",
+  "@nFilter": {
+    "description": "prototype key: n_filter"
+  },
+  "nFootball": "Football academy",
+  "@nFootball": {
+    "description": "prototype key: n_football"
+  },
+  "nFreelance": "Freelance project",
+  "@nFreelance": {
+    "description": "prototype key: n_freelance"
+  },
+  "nFuel": "Fuel",
+  "@nFuel": {
+    "description": "prototype key: n_fuel"
+  },
+  "nGift": "Gift from family",
+  "@nGift": {
+    "description": "prototype key: n_gift"
+  },
+  "nGym": "Gym membership",
+  "@nGym": {
+    "description": "prototype key: n_gym"
+  },
+  "nHelp": "Domestic help",
+  "@nHelp": {
+    "description": "prototype key: n_help"
+  },
+  "nHome": "Home items",
+  "@nHome": {
+    "description": "prototype key: n_home"
+  },
+  "nIftar": "Iftar gathering",
+  "@nIftar": {
+    "description": "prototype key: n_iftar"
+  },
+  "nInsurance": "Car insurance",
+  "@nInsurance": {
+    "description": "prototype key: n_insurance"
+  },
+  "nKahk": "Eid cookies (kahk)",
+  "@nKahk": {
+    "description": "prototype key: n_kahk"
+  },
+  "nMembers": "{n} members",
+  "@nMembers": {
+    "description": "prototype key: n_members",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "nMetro": "Metro card",
+  "@nMetro": {
+    "description": "prototype key: n_metro"
+  },
+  "nMobile": "Mobile & internet",
+  "@nMobile": {
+    "description": "prototype key: n_mobile"
+  },
+  "nMomGift": "Mother’s Day gift",
+  "@nMomGift": {
+    "description": "prototype key: n_mom_gift"
+  },
+  "nNyDinner": "New Year’s Eve dinner",
+  "@nNyDinner": {
+    "description": "prototype key: n_ny_dinner"
+  },
+  "nOuting": "Cinema & outing",
+  "@nOuting": {
+    "description": "prototype key: n_outing"
+  },
+  "nPharmacy": "Pharmacy",
+  "@nPharmacy": {
+    "description": "prototype key: n_pharmacy"
+  },
+  "nPocket": "Pocket money",
+  "@nPocket": {
+    "description": "prototype key: n_pocket"
+  },
+  "nPower": "Electricity & water",
+  "@nPower": {
+    "description": "prototype key: n_power"
+  },
+  "nRamadanFood": "Ramadan groceries",
+  "@nRamadanFood": {
+    "description": "prototype key: n_ramadan_food"
+  },
+  "nRent": "House rent",
+  "@nRent": {
+    "description": "prototype key: n_rent"
+  },
+  "nRentalIn": "Flat rent received",
+  "@nRentalIn": {
+    "description": "prototype key: n_rental_in"
+  },
+  "nSalary": "Monthly salary",
+  "@nSalary": {
+    "description": "prototype key: n_salary"
+  },
+  "nSchool": "School fees",
+  "@nSchool": {
+    "description": "prototype key: n_school"
+  },
+  "nStream": "Streaming subscription",
+  "@nStream": {
+    "description": "prototype key: n_stream"
+  },
+  "nSuper": "Supermarket",
+  "@nSuper": {
+    "description": "prototype key: n_super"
+  },
+  "nSupplies": "School supplies",
+  "@nSupplies": {
+    "description": "prototype key: n_supplies"
+  },
+  "nTakeaway": "Takeaway",
+  "@nTakeaway": {
+    "description": "prototype key: n_takeaway"
+  },
+  "nTaxi": "Taxi",
+  "@nTaxi": {
+    "description": "prototype key: n_taxi"
+  },
+  "nUdhiya": "Udhiya (sacrifice share)",
+  "@nUdhiya": {
+    "description": "prototype key: n_udhiya"
+  },
+  "nUniform": "School uniform",
+  "@nUniform": {
+    "description": "prototype key: n_uniform"
+  },
+  "nVeg": "Vegetables & fruit",
+  "@nVeg": {
+    "description": "prototype key: n_veg"
+  },
+  "nWeekly": "Weekly groceries",
+  "@nWeekly": {
+    "description": "prototype key: n_weekly"
+  },
+  "nXmasGifts": "Christmas gifts",
+  "@nXmasGifts": {
+    "description": "prototype key: n_xmas_gifts"
+  },
+  "nZakat": "Zakat al-Fitr",
+  "@nZakat": {
+    "description": "prototype key: n_zakat"
+  },
+  "name": "Name",
+  "@name": {
+    "description": "prototype key: name"
+  },
+  "namePh": "e.g. House rent",
+  "@namePh": {
+    "description": "prototype key: name_ph"
+  },
+  "navHome": "Home",
+  "@navHome": {
+    "description": "prototype key: nav_home"
+  },
+  "navTx": "Activity",
+  "@navTx": {
+    "description": "prototype key: nav_tx"
+  },
+  "netBalance": "Net balance",
+  "@netBalance": {
+    "description": "prototype key: net_balance"
+  },
+  "neverBackedUp": "Never backed up",
+  "@neverBackedUp": {
+    "description": "prototype key: never_backed_up"
+  },
+  "newCat": "New category",
+  "@newCat": {
+    "description": "prototype key: new_cat"
+  },
+  "newMember": "New family member",
+  "@newMember": {
+    "description": "prototype key: new_member"
+  },
+  "newOccasion": "New occasion",
+  "@newOccasion": {
+    "description": "prototype key: new_occasion"
+  },
+  "newRec": "New recurring item",
+  "@newRec": {
+    "description": "prototype key: new_rec"
+  },
+  "newTransfer": "New transfer",
+  "@newTransfer": {
+    "description": "prototype key: new_transfer"
+  },
+  "newTx": "New transaction",
+  "@newTx": {
+    "description": "prototype key: new_tx"
+  },
+  "next": "Next",
+  "@next": {
+    "description": "prototype key: next"
+  },
+  "nextDue": "Next due date",
+  "@nextDue": {
+    "description": "prototype key: next_due"
+  },
+  "nextMonth": "Expected next month",
+  "@nextMonth": {
+    "description": "prototype key: next_month"
+  },
+  "nextMonthS": "Next month ≈ {v}",
+  "@nextMonthS": {
+    "description": "prototype key: next_month_s",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "nextOn": "Next {d}",
+  "@nextOn": {
+    "description": "prototype key: next_on",
+    "placeholders": {
+      "d": {
+        "type": "String"
+      }
+    }
+  },
+  "next3": "Expected next 3 months",
+  "@next3": {
+    "description": "prototype key: next3"
+  },
+  "no": "No",
+  "@no": {
+    "description": "prototype key: no"
+  },
+  "noBudgets": "No budgets set",
+  "@noBudgets": {
+    "description": "prototype key: no_budgets"
+  },
+  "noBudgetsEdit": "No budgets set. Tap Edit to add limits.",
+  "@noBudgetsEdit": {
+    "description": "prototype key: no_budgets_edit"
+  },
+  "noExp": "No expenses this month",
+  "@noExp": {
+    "description": "prototype key: no_exp"
+  },
+  "noIncome": "No income recorded yet",
+  "@noIncome": {
+    "description": "prototype key: no_income"
+  },
+  "noLimit": "No limit",
+  "@noLimit": {
+    "description": "prototype key: no_limit"
+  },
+  "noMemTx": "No transactions this month",
+  "@noMemTx": {
+    "description": "prototype key: no_mem_tx"
+  },
+  "noMyCats": "No categories of your own yet. Tap “+ Add category”.",
+  "@noMyCats": {
+    "description": "prototype key: no_my_cats"
+  },
+  "noRec": "No recurring items yet",
+  "@noRec": {
+    "description": "prototype key: no_rec"
+  },
+  "noTxMonth": "No transactions this month",
+  "@noTxMonth": {
+    "description": "prototype key: no_tx_month"
+  },
+  "notUsed": "Not used yet",
+  "@notUsed": {
+    "description": "prototype key: not_used"
+  },
+  "note": "Note",
+  "@note": {
+    "description": "prototype key: note"
+  },
+  "notePh": "e.g. Weekly groceries",
+  "@notePh": {
+    "description": "prototype key: note_ph"
+  },
+  "nothing": "Nothing found",
+  "@nothing": {
+    "description": "prototype key: nothing"
+  },
+  "nothingDue": "Nothing due in the next 30 days",
+  "@nothingDue": {
+    "description": "prototype key: nothing_due"
+  },
+  "notifBillTitle": "{n} is due {when}",
+  "@notifBillTitle": {
+    "description": "prototype key: notif_bill_title",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      },
+      "when": {
+        "type": "String"
+      }
+    }
+  },
+  "notifBills": "Bills due",
+  "@notifBills": {
+    "description": "prototype key: notif_bills"
+  },
+  "notifBillsHint": "The day before and on the due date",
+  "@notifBillsHint": {
+    "description": "prototype key: notif_bills_hint"
+  },
+  "notifBudgetTitle": "{c} budget at {p}%",
+  "@notifBudgetTitle": {
+    "description": "prototype key: notif_budget_title",
+    "placeholders": {
+      "c": {
+        "type": "String"
+      },
+      "p": {
+        "type": "String"
+      }
+    }
+  },
+  "notifBudgets": "Budget alerts",
+  "@notifBudgets": {
+    "description": "prototype key: notif_budgets"
+  },
+  "notifBudgetsHint": "When a category reaches 80% and 100%",
+  "@notifBudgetsHint": {
+    "description": "prototype key: notif_budgets_hint"
+  },
+  "notifOccasionBody": "Expected ≈ {v}. Put aside {m} a month.",
+  "@notifOccasionBody": {
+    "description": "prototype key: notif_occasion_body",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      },
+      "m": {
+        "type": "String"
+      }
+    }
+  },
+  "notifOccasionTitle": "{n} in 30 days",
+  "@notifOccasionTitle": {
+    "description": "prototype key: notif_occasion_title",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "notifOccasions": "Occasions",
+  "@notifOccasions": {
+    "description": "prototype key: notif_occasions"
+  },
+  "notifOccasionsHint": "30 days before, with the amount to put aside",
+  "@notifOccasionsHint": {
+    "description": "prototype key: notif_occasions_hint"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "prototype key: notifications"
+  },
+  "occDate": "Date (month and day)",
+  "@occDate": {
+    "description": "prototype key: occ_date"
+  },
+  "occDays": "Days",
+  "@occDays": {
+    "description": "prototype key: occ_days"
+  },
+  "occNone": "None",
+  "@occNone": {
+    "description": "prototype key: occ_none"
+  },
+  "occasion": "Occasion",
+  "@occasion": {
+    "description": "prototype key: occasion"
+  },
+  "occasions": "Occasions",
+  "@occasions": {
+    "description": "prototype key: occasions"
+  },
+  "kOf": "{a} of {b}",
+  "@kOf": {
+    "description": "prototype key: of",
+    "placeholders": {
+      "a": {
+        "type": "String"
+      },
+      "b": {
+        "type": "String"
+      }
+    }
+  },
+  "ok": "OK",
+  "@ok": {
+    "description": "prototype key: ok"
+  },
+  "over": "{v} over",
+  "@over": {
+    "description": "prototype key: over",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "overPct": "You spent {p}% more than you earned this month",
+  "@overPct": {
+    "description": "prototype key: over_pct",
+    "placeholders": {
+      "p": {
+        "type": "String"
+      }
+    }
+  },
+  "overTime": "Spending per member · last 6 months",
+  "@overTime": {
+    "description": "prototype key: over_time"
+  },
+  "overdue": "Overdue {n}d",
+  "@overdue": {
+    "description": "prototype key: overdue",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "password": "Password",
+  "@password": {
+    "description": "prototype key: password"
+  },
+  "pinHint": "4 to 6 digits",
+  "@pinHint": {
+    "description": "prototype key: pin_hint"
+  },
+  "planner": "Planner",
+  "@planner": {
+    "description": "prototype key: planner"
+  },
+  "prefs": "Preferences",
+  "@prefs": {
+    "description": "prototype key: prefs"
+  },
+  "protoNote": "Prototype · data is stored only in this browser",
+  "@protoNote": {
+    "description": "prototype key: proto_note"
+  },
+  "rates": "Exchange rates",
+  "@rates": {
+    "description": "prototype key: rates"
+  },
+  "ratesHint": "Totals, budgets, reports and forecasts are converted to your main currency using these rates.",
+  "@ratesHint": {
+    "description": "prototype key: rates_hint"
+  },
+  "ratesHintSnapshot": "Changing a rate affects new transactions and forecasts. Past transactions keep the rate they were recorded with.",
+  "@ratesHintSnapshot": {
+    "description": "prototype key: rates_hint_snapshot"
+  },
+  "ratesUpdated": "Exchange rate updated",
+  "@ratesUpdated": {
+    "description": "prototype key: rates_updated"
+  },
+  "recIncome": "Recurring income / month",
+  "@recIncome": {
+    "description": "prototype key: rec_income"
+  },
+  "recent": "Recent",
+  "@recent": {
+    "description": "prototype key: recent"
+  },
+  "remind3Days": "Remind me in 3 days",
+  "@remind3Days": {
+    "description": "prototype key: remind_3_days"
+  },
+  "reminderBody": "It has been more than a week since your last backup.",
+  "@reminderBody": {
+    "description": "prototype key: reminder_body"
+  },
+  "reminderTitle": "Back up your data",
+  "@reminderTitle": {
+    "description": "prototype key: reminder_title"
+  },
+  "repeat": "Repeat",
+  "@repeat": {
+    "description": "prototype key: repeat"
+  },
+  "reports": "Reports",
+  "@reports": {
+    "description": "prototype key: reports"
+  },
+  "reset": "Reset demo data",
+  "@reset": {
+    "description": "prototype key: reset"
+  },
+  "restore": "Restore",
+  "@restore": {
+    "description": "prototype key: restore"
+  },
+  "restoreBackup": "Restore from backup",
+  "@restoreBackup": {
+    "description": "prototype key: restore_backup"
+  },
+  "restoreConfirmBody": "This backup from {d} ({device}) has {n} transactions. Restoring replaces all data on this phone.",
+  "@restoreConfirmBody": {
+    "description": "prototype key: restore_confirm_body",
+    "placeholders": {
+      "d": {
+        "type": "String"
+      },
+      "device": {
+        "type": "String"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "restoreConfirmTitle": "Replace your data?",
+  "@restoreConfirmTitle": {
+    "description": "prototype key: restore_confirm_title"
+  },
+  "restoreDrive": "Restore from Google Drive",
+  "@restoreDrive": {
+    "description": "prototype key: restore_drive"
+  },
+  "restored": "Backup restored",
+  "@restored": {
+    "description": "prototype key: restored"
+  },
+  "role": "Role",
+  "@role": {
+    "description": "prototype key: role"
+  },
+  "roleChild": "Child",
+  "@roleChild": {
+    "description": "prototype key: role_child"
+  },
+  "roleOther": "Other",
+  "@roleOther": {
+    "description": "prototype key: role_other"
+  },
+  "roleParent": "Parent",
+  "@roleParent": {
+    "description": "prototype key: role_parent"
+  },
+  "sampleBanner": "Sample data",
+  "@sampleBanner": {
+    "description": "prototype key: sample_banner"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "prototype key: save"
+  },
+  "savedPct": "You saved {p}% of your income this month",
+  "@savedPct": {
+    "description": "prototype key: saved_pct",
+    "placeholders": {
+      "p": {
+        "type": "String"
+      }
+    }
+  },
+  "search": "Search notes or categories",
+  "@search": {
+    "description": "prototype key: search"
+  },
+  "security": "Security",
+  "@security": {
+    "description": "prototype key: security"
+  },
+  "seeAll": "See all",
+  "@seeAll": {
+    "description": "prototype key: see_all"
+  },
+  "seedYears": "Seed 3 years (debug)",
+  "@seedYears": {
+    "description": "prototype key: seed_years"
+  },
+  "setPin": "Set a PIN",
+  "@setPin": {
+    "description": "prototype key: set_pin"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "prototype key: settings"
+  },
+  "settingsMore": "More",
+  "@settingsMore": {
+    "description": "prototype key: settings_more"
+  },
+  "setupCurrency": "Main currency and country",
+  "@setupCurrency": {
+    "description": "prototype key: setup_currency"
+  },
+  "setupLanguage": "Choose your language",
+  "@setupLanguage": {
+    "description": "prototype key: setup_language"
+  },
+  "setupMembers": "Your family",
+  "@setupMembers": {
+    "description": "prototype key: setup_members"
+  },
+  "setupMembersHint": "Add the people you want to follow. You can do this later.",
+  "@setupMembersHint": {
+    "description": "prototype key: setup_members_hint"
+  },
+  "setupStart": "How do you want to start?",
+  "@setupStart": {
+    "description": "prototype key: setup_start"
+  },
+  "setupWelcome": "Welcome to MoneyFollow",
+  "@setupWelcome": {
+    "description": "prototype key: setup_welcome"
+  },
+  "shareLog": "Share diagnostic log",
+  "@shareLog": {
+    "description": "prototype key: share_log"
+  },
+  "shareOf": "Share of family",
+  "@shareOf": {
+    "description": "prototype key: share_of"
+  },
+  "skip": "Skip",
+  "@skip": {
+    "description": "prototype key: skip"
+  },
+  "spent": "Spent",
+  "@spent": {
+    "description": "prototype key: spent"
+  },
+  "spentV": "{v} spent",
+  "@spentV": {
+    "description": "prototype key: spent_v",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "startOwn": "Start with my own data",
+  "@startOwn": {
+    "description": "prototype key: start_own"
+  },
+  "startOwnHint": "Begin with an empty app.",
+  "@startOwnHint": {
+    "description": "prototype key: start_own_hint"
+  },
+  "sync": "Sync",
+  "@sync": {
+    "description": "prototype key: sync"
+  },
+  "syncChangePassphrase": "Change passphrase",
+  "@syncChangePassphrase": {
+    "description": "prototype key: sync_change_passphrase"
+  },
+  "syncComing": "Sync with Google Drive is coming in version 1.1.",
+  "@syncComing": {
+    "description": "prototype key: sync_coming"
+  },
+  "syncDevices": "Devices",
+  "@syncDevices": {
+    "description": "prototype key: sync_devices"
+  },
+  "syncDisconnect": "Disconnect",
+  "@syncDisconnect": {
+    "description": "prototype key: sync_disconnect"
+  },
+  "syncModeA": "One shared family Google account",
+  "@syncModeA": {
+    "description": "prototype key: sync_mode_a"
+  },
+  "syncModeB": "Each parent''s own Google account",
+  "@syncModeB": {
+    "description": "prototype key: sync_mode_b"
+  },
+  "syncNow": "Sync now",
+  "@syncNow": {
+    "description": "prototype key: sync_now"
+  },
+  "syncPassphrase": "Family passphrase",
+  "@syncPassphrase": {
+    "description": "prototype key: sync_passphrase"
+  },
+  "syncRecoveryKey": "Recovery key",
+  "@syncRecoveryKey": {
+    "description": "prototype key: sync_recovery_key"
+  },
+  "syncSavedIt": "I saved it",
+  "@syncSavedIt": {
+    "description": "prototype key: sync_saved_it"
+  },
+  "syncStatusFailed": "Sync failed – tap to retry",
+  "@syncStatusFailed": {
+    "description": "prototype key: sync_status_failed"
+  },
+  "syncStatusOk": "Synced {t}",
+  "@syncStatusOk": {
+    "description": "prototype key: sync_status_ok",
+    "placeholders": {
+      "t": {
+        "type": "String"
+      }
+    }
+  },
+  "syncStatusWaiting": "Waiting for internet",
+  "@syncStatusWaiting": {
+    "description": "prototype key: sync_status_waiting"
+  },
+  "syncTitle": "Sync with Google Drive",
+  "@syncTitle": {
+    "description": "prototype key: sync_title"
+  },
+  "syncWifiOnly": "Sync on Wi-Fi only",
+  "@syncWifiOnly": {
+    "description": "prototype key: sync_wifi_only"
+  },
+  "system": "System",
+  "@system": {
+    "description": "prototype key: system"
+  },
+  "tAdded": "Transaction added",
+  "@tAdded": {
+    "description": "prototype key: t_added"
+  },
+  "tAddedRep": "Added and scheduled to repeat",
+  "@tAddedRep": {
+    "description": "prototype key: t_added_rep"
+  },
+  "tCatDeleted": "Category deleted",
+  "@tCatDeleted": {
+    "description": "prototype key: t_cat_deleted"
+  },
+  "tCatSaved": "Category saved",
+  "@tCatSaved": {
+    "description": "prototype key: t_cat_saved"
+  },
+  "tDeleted": "Transaction deleted",
+  "@tDeleted": {
+    "description": "prototype key: t_deleted"
+  },
+  "tMemDeleted": "Family member removed",
+  "@tMemDeleted": {
+    "description": "prototype key: t_mem_deleted"
+  },
+  "tMemSaved": "Family member saved",
+  "@tMemSaved": {
+    "description": "prototype key: t_mem_saved"
+  },
+  "tOccDeleted": "Occasion deleted",
+  "@tOccDeleted": {
+    "description": "prototype key: t_occ_deleted"
+  },
+  "tOccSaved": "Occasion saved",
+  "@tOccSaved": {
+    "description": "prototype key: t_occ_saved"
+  },
+  "tPaid": "Recorded: {n}",
+  "@tPaid": {
+    "description": "prototype key: t_paid",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "tRecDeleted": "Recurring item removed",
+  "@tRecDeleted": {
+    "description": "prototype key: t_rec_deleted"
+  },
+  "tRecSaved": "Recurring item saved",
+  "@tRecSaved": {
+    "description": "prototype key: t_rec_saved"
+  },
+  "tReset": "Demo data restored",
+  "@tReset": {
+    "description": "prototype key: t_reset"
+  },
+  "tTransferDeleted": "Transfer deleted",
+  "@tTransferDeleted": {
+    "description": "prototype key: t_transfer_deleted"
+  },
+  "tTransferSaved": "Transfer saved",
+  "@tTransferSaved": {
+    "description": "prototype key: t_transfer_saved"
+  },
+  "tUpdated": "Transaction updated",
+  "@tUpdated": {
+    "description": "prototype key: t_updated"
+  },
+  "tabEv": "Occasions",
+  "@tabEv": {
+    "description": "prototype key: tab_ev"
+  },
+  "tabFc": "Forecast",
+  "@tabFc": {
+    "description": "prototype key: tab_fc"
+  },
+  "tabRec": "Recurring",
+  "@tabRec": {
+    "description": "prototype key: tab_rec"
+  },
+  "tapAgain": "Tap again to confirm",
+  "@tapAgain": {
+    "description": "prototype key: tap_again"
+  },
+  "theme": "Theme",
+  "@theme": {
+    "description": "prototype key: theme"
+  },
+  "themeSystem": "System",
+  "@themeSystem": {
+    "description": "prototype key: theme_system"
+  },
+  "thisMonth": "Spent this month",
+  "@thisMonth": {
+    "description": "prototype key: this_month"
+  },
+  "toAccount": "To",
+  "@toAccount": {
+    "description": "prototype key: to_account"
+  },
+  "today": "Today",
+  "@today": {
+    "description": "prototype key: today"
+  },
+  "tomorrow": "Tomorrow",
+  "@tomorrow": {
+    "description": "prototype key: tomorrow"
+  },
+  "total": "Total",
+  "@total": {
+    "description": "prototype key: total"
+  },
+  "totalBudget": "Total budget",
+  "@totalBudget": {
+    "description": "prototype key: total_budget"
+  },
+  "totalIn": "Total in {c}",
+  "@totalIn": {
+    "description": "prototype key: total_in",
+    "placeholders": {
+      "c": {
+        "type": "String"
+      }
+    }
+  },
+  "transactions": "Transactions",
+  "@transactions": {
+    "description": "prototype key: transactions"
+  },
+  "transfer": "Transfer",
+  "@transfer": {
+    "description": "prototype key: transfer"
+  },
+  "transferFromTo": "{from} → {to}",
+  "@transferFromTo": {
+    "description": "prototype key: transfer_from_to",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "transferHint": "Transfers move money between your accounts. They don''t count as income or spending.",
+  "@transferHint": {
+    "description": "prototype key: transfer_hint"
+  },
+  "transfers": "Transfers",
+  "@transfers": {
+    "description": "prototype key: transfers"
+  },
+  "typeL": "Type",
+  "@typeL": {
+    "description": "prototype key: type_l"
+  },
+  "unlock": "Unlock",
+  "@unlock": {
+    "description": "prototype key: unlock"
+  },
+  "useBiometric": "Use fingerprint / face",
+  "@useBiometric": {
+    "description": "prototype key: use_biometric"
+  },
+  "usedN": "Used in {n} transactions",
+  "@usedN": {
+    "description": "prototype key: used_n",
+    "placeholders": {
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "variable": "Day-to-day (estimated)",
+  "@variable": {
+    "description": "prototype key: variable"
+  },
+  "variableS": "Day-to-day",
+  "@variableS": {
+    "description": "prototype key: variable_s"
+  },
+  "version": "Version {v}",
+  "@version": {
+    "description": "prototype key: version",
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "viewAll": "View all",
+  "@viewAll": {
+    "description": "prototype key: view_all"
+  },
+  "vsLast": "vs last month",
+  "@vsLast": {
+    "description": "prototype key: vs_last"
+  },
+  "vsVal": "{d}% spend",
+  "@vsVal": {
+    "description": "prototype key: vs_val",
+    "placeholders": {
+      "d": {
+        "type": "String"
+      }
+    }
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "prototype key: yes"
+  },
+  "yesterday": "Yesterday",
+  "@yesterday": {
+    "description": "prototype key: yesterday"
+  }
+}

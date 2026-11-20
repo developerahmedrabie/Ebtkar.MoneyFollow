@@ -1,0 +1,16 @@
+targets:
+  $default:
+    builders:
+      drift_dev:
+        options:
+          store_date_time_values_as_text: false
+          named_parameters: true
+          sql:
+            dialect: sqlite
+            options:
+              version: "3.45"
+              modules:
+                - json1
+      riverpod_generator:
+        options:
+          provider_name_suffix: "Provider"
